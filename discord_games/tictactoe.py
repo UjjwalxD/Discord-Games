@@ -144,7 +144,7 @@ class Tictactoe:
         self.embed_color = embed_color
 
         embed = self.make_embed()
-        self.message = await ctx.send(self.board_string(), embed=embed, **kwargs)
+        self.message = await ctx.reply(self.board_string(), embed=embed, **kwargs)
 
         for button in self._controls:
             await self.message.add_reaction(button)
